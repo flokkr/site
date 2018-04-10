@@ -1,0 +1,11 @@
+name: zookeeper
+containers:
+   - flokkr/zookeeper
+git: https://github.com/flokkr/docker-zookeeper
+baseversion:
+launcherversion:
+latest: 3.4.10
+previous: ["3.0.1"]
+run:
+  compose: https://github.com/flokkr/runtime-compose/tree/master/hdfs
+  chart: https://github.com/flokkr/charts/tree/master/hdfs

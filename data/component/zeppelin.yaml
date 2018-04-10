@@ -1,0 +1,11 @@
+name: zeppelin
+containers:
+   - flokkr/spark
+git: https://github.com/flokkr/docker-zeppelin
+baseversion:
+launcherversion:
+latest: 0.7.3
+previous: ["3.0.1"]
+run:
+  compose: https://github.com/flokkr/runtime-compose/tree/master/hdfs
+  chart: https://github.com/flokkr/charts/tree/master/hdfs

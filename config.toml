@@ -3,7 +3,7 @@ title = "Flokkr."
 # for smart copyright line, leave this blank and check [params.copyright]
 copyright = ""
 
-theme = "minimo"
+theme = "hugo-theme-bootie-docs"
 
 disqusShortname = ""
 googleAnalytics = ""
@@ -18,6 +18,9 @@ pygmentsCodefences = true
 
 # Missing translations will default to this content language
 defaultContentLanguage = "en"
+
+[params]
+noCategoryLink = true
 
 [params.info]
 description = "Containerization for Apache Hadoop, Spark, ..."
@@ -37,6 +40,7 @@ suffix = ""
 
 [params.settings]
 # date & time format: https://golang.org/pkg/time/
+
 dateFormat = "2006, Jan 02"
 listDateFormat = "2006, Jan 02"
 hideEntryNavigation = ["page"] # boolean / array of sections
@@ -51,32 +55,6 @@ admins = [] # array of Facebook IDs
 appID = ""
 pageID = ""
 
-[params.opengraph.twitter]
-page = "" # Twitter page username
-
-[params.seo]
-# Title Separator: - – — · • * ⋆ | ~ « » < >
-titleSeparator = "•"
-
-[params.social]
-#codepen = "MunifTanjim"
-#email = "contact@example.com"
-#facebook = "MunifTanjim"
-github = "flokkr"
-#instagram = "MunifTanjim"
-#linkedin = "muniftanjim"
-twitter = "anzix"
-#telegram = "MunifTanjim"
-#google_scholar = "qc6CJjYAAAAJ"
-
-[params.social.config]
-#platforms = ["github","facebook","twitter","instagram","email","codepen","linkedin","telegram","google_scholar"]
-platforms = ["github","twitter"]
-
-[taxonomies]
-author = "authors"
-category = "categories"
-tag = "tags"
 
 [permalinks]
 page = "/:slug/"
@@ -86,7 +64,6 @@ name = "Source"
 weight = -10
 identifier = "github"
 url = "https://github.com/flokkr"
-
 
 [[menu.main]]
 name = "Documentation"

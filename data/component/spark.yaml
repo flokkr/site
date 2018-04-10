@@ -1,0 +1,11 @@
+name: spark
+containers:
+   - flokkr/spark
+git: https://github.com/flokkr/docker-spark
+baseversion:
+launcherversion:
+latest: 2.3.0
+previous: ["3.0.1"]
+run:
+  compose: https://github.com/flokkr/runtime-compose/tree/master/hdfs
+  chart: https://github.com/flokkr/charts/tree/master/hdfs

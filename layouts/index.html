@@ -1,0 +1,73 @@
+{{ $baseUrl := .Site.BaseURL }}
+{{ partial "header.html" . }}
+
+<main role="main">
+
+<div class="row">
+	<!-- Main jumbotron for a primary marketing message or call to action -->
+	<div class="jumbotron">
+		<h1>{{ .Site.Title }}</h1>
+    <p>Flokkr is a containerization project for Apache Hadoop, Apache Spark and other bigdata project.</p>
+    <p>It provides:</br></br>
+    1. ready to use containers for various bigdata project</br></br>
+    2. example configuration to run the containers in various environments: in Kubernetes cluster, with Nomad scheduling, with Consul configuration loading or just with local docker-compose.</li>
+    </p>
+	</div>
+</div>
+
+{{ range where .Site.Pages "Title" "_index" }}
+	<div class="row doc-main">
+		<p class="doc-entry-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time></p>
+		{{ .Content }}
+	</div>
+{{ end }}
+
+
+<h2>Containers</h2>
+
+
+  <table class="table">
+        <tr>
+           <td>name</td>
+           <td>version (latest)</td>
+           <td>baseimage</td>
+           <td>launcher</td>
+        </tr>
+{{ range $.Site.Data.component }}
+     <tr>
+     <td>
+        {{ .name }}
+     </td>
+     <td>
+        {{ .latest }}
+     <td>
+        {{ .baseversion }}
+     <td>
+        {{ .launcherversion }}
+     </td>
+     </tr>
+{{ end }}
+  </table>
+
+
+	<h2>Info</h2>
+	<div>
+		<ul class="doc-list-category">
+      {{ range ( first .Site.Params.settings.recentPostsLength ( where .Data.Pages "Section" "ne" "page" ) ) }}
+        <li><a href="{{.URL}}">{{.Title}}</a></li>
+      {{ end }}
+		</ul>
+	</div>
+
+{{ $title := .Site.Title }}
+{{ with .Site.Params.withSitePosts }}
+<hr />
+
+<div class="row doc-main text-center">
+	<a href="{{ $baseUrl }}/post">See posts for {{ $title }}</a>
+</div>
+{{ end }}
+
+</main>
+
+{{ partial "footer.html" . }}
