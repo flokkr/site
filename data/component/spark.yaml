@@ -2,8 +2,8 @@ name: spark
 containers:
    - flokkr/spark
 git: https://github.com/flokkr/docker-spark
-baseversion:
-launcherversion:
+baseversion: 
+launcherversion: 
 latest: 2.3.0
 previous: ["3.0.1"]
 run:

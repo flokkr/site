@@ -2,8 +2,8 @@ name: kafka
 containers:
    - flokkr/kafka
 git: https://github.com/flokkr/docker-kafka
-baseversion:
-launcherversion:
+baseversion: 
+launcherversion: 
 latest: 0.10.2.1
 previous: ["3.0.1"]
 run:
