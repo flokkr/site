@@ -2,8 +2,8 @@ name: zeppelin
 containers:
    - flokkr/spark
 git: https://github.com/flokkr/docker-zeppelin
-baseversion: 
-launcherversion: 
+baseversion: 29
+launcherversion: e2bebcca0d6068a2560afade9729e258918d5a3d
 latest: 0.7.3
 previous: ["3.0.1"]
 run:

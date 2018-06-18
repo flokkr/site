@@ -1,10 +1,10 @@
-name: spark
+name: hbase
 containers:
-   - flokkr/spark
-git: https://github.com/flokkr/docker-spark
+   - flokkr/hbase
+git: https://github.com/flokkr/docker-hbase
 baseversion: 29
 launcherversion: e2bebcca0d6068a2560afade9729e258918d5a3d
-latest: 2.3.0
+latest: 1.4.3
 previous: ["3.0.1"]
 run:
   compose: https://github.com/flokkr/runtime-compose/tree/master/hdfs
