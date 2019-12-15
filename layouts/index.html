@@ -6,13 +6,17 @@
 <div class="row">
 	<!-- Main jumbotron for a primary marketing message or call to action -->
 	<div class="jumbotron">
-		<h1>{{ .Site.Title }}</h1>
-    <p>Flokkr is a containerization project for <b>Apache Hadoop, Apache Spark</b> and other bigdata project to run them in <b>Kubernetes</b>.</p>
+      <h1><span style="color:rgb(22, 21, 47)">(Apache) Big data <span style="color:red">&#10084;</span> Kubernetes</span></h1>
+    <p></p>
+    <p>Flokkr is a containerization project for<b>Apache Flink, Kafka, Ozone, Spark</b> 
+      and other big data project to run them in <b>Kubernetes</b> with a GitOps based approach.</p>
     <p>It provides:</br></br>
-    1. ready to use containers for various bigdata project</br>
-    2. frarmework to generate kuberntes resources</br>
-    3. various configuration set for different use cases (Kerberos, HA, TDE, etc.)
-    </p>
+    1. ready to use containers for various Bigdata project</br>
+    2. framework to generate Kubernetes resources with any type of customization</br>
+    3. various configuration set for different use cases (Kerberos, HA, TDE, etc.)<br/> 
+    4. helper tools to use the projects in cloud-native environments 
+   </p>
+    <p>Please note that this project is <b>NOT</b> an official <a href="https://apache.org">Apache</a> project</p>
 	</div>
 </div>
 
@@ -23,39 +27,31 @@
 	</div>
 {{ end }}
 
-
-<h2>Containers</h2>
-
-
-  <table class="table">
-        <tr>
-           <td>name</td>
-           <td>version (latest)</td>
-           <td>baseimage</td>
-           <td>launcher</td>
-        </tr>
-{{ range $.Site.Data.component }}
-     <tr>
-     <td>
-        {{ .name }}
-     </td>
-     <td>
-        {{ .latest }}
-     <td>
-        {{ .baseversion }}
-     <td>
-        {{ .launcherversion }}
-     </td>
-     </tr>
-{{ end }}
-  </table>
+<h2>Getting started</h2>
+{{range where .Site.Pages "Title" "Getting started"}}
+        
+			 <div>
+          {{.Content}}
+			 </div>
+          {{end}}
 
 
+          <h2>Next steps</h2>
+          {{range where .Site.Pages "Title" "Next steps"}}
+                  
+                    <div>
+                    {{.Content}}
+                    </div>
+                    {{end}}
+
+                    
 	<h2>News</h2>
 	<div>
 		<ul class="doc-list-category">
-      {{ range ( first .Site.Params.settings.recentPostsLength ( where .Data.Pages "Section" "ne" "page" ) ) }}
+      {{ range (where .Site.Pages "Title" "eq" "Posts")}}
+      {{ range ( first .Site.Params.settings.recentPostsLength .Pages) }}
         <li><a href="{{.URL}}">{{.Title}}</a></li>
+      {{ end }}
       {{ end }}
 		</ul>
 	</div>
