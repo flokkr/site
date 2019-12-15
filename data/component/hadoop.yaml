@@ -5,8 +5,8 @@ containers:
 git: https://github.com/flokkr/docker-hadoop
 baseversion: 29
 launcherversion: e2bebcca0d6068a2560afade9729e258918d5a3d
-latest: 3.1.0
-previous: ["3.0.1"]
+latest: 3.2.0
+previous: ["3.1.0"]
 run:
   compose: https://github.com/flokkr/runtime-compose/tree/master/hdfs
   chart: https://github.com/flokkr/charts/tree/master/hdfs

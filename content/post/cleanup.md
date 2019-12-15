@@ -1,6 +1,6 @@
 ---
 title: "The big cleanup"
-date: 2019-02-82
+date: 2019-02-08
 ---
 
 Flokkr project was an experimental area from the beginning. After a while I realized that my containerization work requires too many repositories and I moved them to this organization. The repositories contained _mutiple_ experiments to containerize Hadoop/Spark and other bigdata projects.
