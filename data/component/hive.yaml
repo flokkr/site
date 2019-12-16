@@ -2,10 +2,6 @@ name: hive
 containers:
    - flokkr/hive
 git: https://github.com/flokkr/docker-hive
-baseversion: 
-launcherversion: 
-latest: 2.3.2
-previous: ["3.0.1"]
-run:
-  compose: https://github.com/flokkr/runtime-compose/tree/master/hive
-  chart: https://github.com/flokkr/charts/tree/master/hive
+versions: 
+  - 2.3.2
+status: wip

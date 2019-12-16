@@ -1,0 +1,7 @@
+name: flink
+containers:
+   - flokkr/flink
+git: https://github.com/flokkr/docker-flink
+versions: 
+  - 1.9.1
+    

@@ -1,0 +1,6 @@
+name: ozone
+containers:
+   - flokkr/ozone
+git: https://github.com/flokkr/docker-ozone
+versions:
+  - 0.4.1

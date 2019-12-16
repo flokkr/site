@@ -26,7 +26,29 @@
 		{{ .Content }}
 	</div>
 {{ end }}
+<h2>Containers</h2>
 
+
+  <table class="table">
+        <tr>
+           <td>name</td>
+           <td>version (latest)</td>
+           <td>status</td>
+        </tr>
+{{ range $.Site.Data.component }}
+     <tr>
+     <td>
+        {{ .name }}
+     </td>
+     <td>
+        {{ .versions }}
+      </td>
+      <td>
+        {{.status}}
+      </td>
+     </tr>
+{{ end }}
+</table>
 <h2>Getting started</h2>
 {{range where .Site.Pages "Title" "Getting started"}}
         
