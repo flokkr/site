@@ -1,5 +1,0 @@
-name: zeppelin
-containers:
-   - flokkr/spark
-git: https://github.com/flokkr/docker-zeppelin
-status: deprecated
