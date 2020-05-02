@@ -1,7 +1,9 @@
 name: flink
+basetag: 34
+urlpath: flink/flink-%s/flink-%s-bin-scala_2.11.tgz
 containers:
    - flokkr/flink
 git: https://github.com/flokkr/docker-flink
-versions: 
-  - 1.9.1
-    
+versions:
+  - 1.10.0
+  - 1.9.3
