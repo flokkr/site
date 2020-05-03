@@ -59,18 +59,6 @@ pageID = ""
 [permalinks]
 page = "/:slug/"
 
-[[menu.main]]
-name = "Source"
-weight = -10
-identifier = "github"
-url = "https://github.com/flokkr"
-
-[[menu.main]]
-name = "Documentation"
-weight = 0
-identifier = "doc"
-url = "https://flokkr.github.io/docs"
-
 [blackfriday]
 hrefTargetBlank = true
 
