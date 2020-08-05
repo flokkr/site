@@ -1,5 +1,5 @@
 name: ozone
-basetag: 36
+basetag: 37
 urlpath: hadoop/ozone/ozone-%s/hadoop-ozone-%s.tar.gz
 containers:
    - flokkr/ozone
